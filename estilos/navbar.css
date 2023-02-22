@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,700&display=swap");
+* {
+  padding: 0 7px;
+  font-family: "Open Sans", sans-serif;
+}
+.navbar-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  cursor: pointer;
+  padding: 10px;
+}
+img {
+  height: 40px;
+  transition: all 0.3s;
+}
+img:hover {
+  transform: scale(1.2);
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav-links {
+  list-style: none;
+}
+.nav-links a {
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+}
+.nav-links a:hover {
+  color: #6cbc54;
+}
+li {
+  display: inline-block;
+  padding: 0 20px;
+  transition: all 0.3s;
+}
+li:hover {
+  transform: scale(1.2);
+}
+button {
+  font-weight: 700;
+  color: white;
+  background: #6cbc54;
+  padding: 9px 25px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.3s ease 0s;
+}
+button:hover {
+  background-color: darkgreen;
+  transform: scale(1.1);
+}
+.checkbtn {
+  font-size: 30px;
+  color: #6cbc54;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+
+@media (max-width: 540px) {
+  .checkbtn {
+    display: block;
+  }
+  .logo {
+    padding: 0;
+  }
+  img {
+    width: auto;
+    height: 30px;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: green;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  li {
+    display: block;
+  }
+  a {
+    font-size: 20px;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .logo {
+    padding: 0;
+  }
+  img {
+    width: auto;
+    height: 30px;
+  }
+  li {
+    font-size: 13px;
+    padding: 0;
+  }
+  button {
+    content: "join";
+  }
+}
+
+@media (max-width: 768px) {
+  li {
+    padding: 0;
+  }
+}
